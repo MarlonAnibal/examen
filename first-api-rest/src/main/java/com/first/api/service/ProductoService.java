@@ -13,26 +13,24 @@ public class ProductoService {
     @Autowired
     private ProductoRepository productoRepository;
 
-    public Producto saveProducto(Producto producto) {
+    public Producto saveProducto(Producto producto){
         return productoRepository.save(producto);
     }
 
-    public List<Producto> getProductos() {
+    public List<Producto> getProductos(){
         return productoRepository.getAllProductos();
     }
 
-    public Producto getProductoById(int id) {
+    public Producto getProductoById(int id){
         return productoRepository.findById(id);
     }
 
-    public String deleteProducto(int id) {
+    public String deleteProducto(int id){
         productoRepository.delete(id);
         return "Producto eliminado !!" + id;
     }
 
-    public Producto updateProducto(Producto producto) {
-
-        System.out.println("Hola Mundo");
+    public Producto updateProducto(Producto  producto){
         return productoRepository.update(producto);
-
     }
+}
