@@ -33,7 +33,6 @@ public class ProductoService {
     public Producto updateProducto(Producto producto) {
 
         System.out.println("Hola Mundo");
-        System.out.println("Hello world");
         return productoRepository.update(producto);
 
     }
